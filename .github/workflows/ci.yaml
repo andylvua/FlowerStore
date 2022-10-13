@@ -12,10 +12,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Set up JDK 15
+      - name: Set up JDK 19
         uses: actions/setup-java@v3
         with:
-          java-version: '15'
+          java-version: '19'
           distribution: 'adopt'
       - name: Lint Code Base
         uses:  github/super-linter/slim@v4
@@ -23,5 +23,7 @@ jobs:
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           JAVA_FILE_NAME: checkstyle.xml
+          VALIDATE_GOOGLE_JAVA_FORMAT: false
+          FILTER_REGEX_EXCLUDE: .*test/.*
       - name: Test with Maven
         run: mvn --batch-mode --update-snapshots package
