@@ -1,4 +1,4 @@
-package ua.edu.ucu.apps.models;
+package ua.edu.ucu.apps.flowerstore_web.models;
 
 public record FlowerPack(Flower flower, int count) {
     public FlowerType getFlowerType() {
