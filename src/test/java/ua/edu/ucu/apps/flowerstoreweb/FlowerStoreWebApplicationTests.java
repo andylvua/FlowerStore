@@ -1,4 +1,4 @@
-package ua.edu.ucu.apps.flowerstore_web;
+package ua.edu.ucu.apps.flowerstoreweb;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

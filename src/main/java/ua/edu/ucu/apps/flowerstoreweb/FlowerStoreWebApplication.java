@@ -1,4 +1,4 @@
-package ua.edu.ucu.apps.flowerstore_web;
+package ua.edu.ucu.apps.flowerstoreweb;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,12 +1,12 @@
-package ua.edu.ucu.apps.flowerstore_web.client;
+package ua.edu.ucu.apps.flowerstoreweb.client;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
-import ua.edu.ucu.apps.flowerstore_web.delivery.Delivery;
-import ua.edu.ucu.apps.flowerstore_web.models.Item;
-import ua.edu.ucu.apps.flowerstore_web.payment.Payment;
-import ua.edu.ucu.apps.flowerstore_web.user.User;
+import ua.edu.ucu.apps.flowerstoreweb.delivery.Delivery;
+import ua.edu.ucu.apps.flowerstoreweb.models.Item;
+import ua.edu.ucu.apps.flowerstoreweb.payment.Payment;
+import ua.edu.ucu.apps.flowerstoreweb.user.User;
 
 import java.util.List;
 

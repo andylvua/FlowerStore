@@ -1,4 +1,4 @@
-package ua.edu.ucu.apps.flowerstore_web.models;
+package ua.edu.ucu.apps.flowerstoreweb.models;
 
 public class Tulip extends Flower {
     public Tulip() {

@@ -1,15 +1,14 @@
-package ua.edu.ucu.apps.flowerstore_web.models;
+package ua.edu.ucu.apps.flowerstoreweb.models;
 
-// The class Item will represent a basic element of Order.
 public class Item {
     private String name;
     private int quantity;
     private double price;
 
-    public Item(String name, int quantity, double price) {
-        this.name = name;
-        this.quantity = quantity;
-        this.price = price;
+    public Item(String newName, int newQuantity, double newPrice) {
+        this.name = newName;
+        this.quantity = newQuantity;
+        this.price = newPrice;
     }
 
     public String getName() {

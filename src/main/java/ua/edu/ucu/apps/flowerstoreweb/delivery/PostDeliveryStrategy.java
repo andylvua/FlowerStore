@@ -1,6 +1,6 @@
-package ua.edu.ucu.apps.flowerstore_web.delivery;
+package ua.edu.ucu.apps.flowerstoreweb.delivery;
 
-import ua.edu.ucu.apps.flowerstore_web.models.Item;
+import ua.edu.ucu.apps.flowerstoreweb.models.Item;
 
 import java.util.List;
 

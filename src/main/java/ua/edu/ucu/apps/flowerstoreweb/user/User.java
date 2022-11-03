@@ -1,4 +1,4 @@
-package ua.edu.ucu.apps.flowerstore_web.user;
+package ua.edu.ucu.apps.flowerstoreweb.user;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -10,6 +10,5 @@ public class User {
     private String name;
     private String email;
     private String password;
-
-    double balance;
+    private double balance;
 }

@@ -1,7 +1,7 @@
-package ua.edu.ucu.apps.flowerstore_web.payment;
+package ua.edu.ucu.apps.flowerstoreweb.payment;
 
-import ua.edu.ucu.apps.flowerstore_web.models.Item;
-import ua.edu.ucu.apps.flowerstore_web.user.User;
+import ua.edu.ucu.apps.flowerstoreweb.models.Item;
+import ua.edu.ucu.apps.flowerstoreweb.user.User;
 
 import java.util.List;
 

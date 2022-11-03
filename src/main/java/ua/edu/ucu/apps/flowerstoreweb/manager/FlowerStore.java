@@ -1,12 +1,10 @@
-package ua.edu.ucu.apps.flowerstore_web.manager;
+package ua.edu.ucu.apps.flowerstoreweb.manager;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import ua.edu.ucu.apps.flowerstore_web.models.FlowerBucket;
-import ua.edu.ucu.apps.flowerstore_web.models.FlowerPack;
-import ua.edu.ucu.apps.flowerstore_web.models.FlowerType;
+import ua.edu.ucu.apps.flowerstoreweb.models.FlowerBucket;
+import ua.edu.ucu.apps.flowerstoreweb.models.FlowerPack;
+import ua.edu.ucu.apps.flowerstoreweb.models.FlowerType;
 
 import java.util.ArrayList;
 

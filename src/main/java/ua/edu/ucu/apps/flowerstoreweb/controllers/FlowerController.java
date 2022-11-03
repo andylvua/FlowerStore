@@ -1,10 +1,10 @@
-package ua.edu.ucu.apps.flowerstore_web.controllers;
+package ua.edu.ucu.apps.flowerstoreweb.controllers;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import ua.edu.ucu.apps.flowerstore_web.manager.FlowerStore;
-import ua.edu.ucu.apps.flowerstore_web.models.*;
+import ua.edu.ucu.apps.flowerstoreweb.manager.FlowerStore;
+import ua.edu.ucu.apps.flowerstoreweb.models.*;
 
 import java.util.ArrayList;
 
@@ -47,9 +47,9 @@ public class FlowerController {
 
     @GetMapping
     public String index() {
-        return "Welcome to the Flower Store! Use /api/flowerstore/all to get all flower buckets. " +
-                "<br><br> Use /api/flowerstore/help to get list of available commands." +
-                "<br><br> Use /api/flowerstore/initialize to initialize flower store with random data.";
+        return "Welcome to the Flower Store! Use /api/flowerstore/all to get all flower buckets. "
+                + "<br><br> Use /api/flowerstore/help to get list of available commands."
+                + "<br><br> Use /api/flowerstore/initialize to initialize flower store with random data.";
     }
 
     @GetMapping("/all")
@@ -65,9 +65,11 @@ public class FlowerController {
 
     @GetMapping("/help")
     public String help() {
-        return "Use /api/flowerstore/search?flowerType=ROSE to search for flower buckets with " +
-                "flower packs of the specified type. <br><br> Use /api/flowerstore/search?flowerType=ROSE&minCount=2&maxCount=5 " +
-                "to search for flower buckets with flower packs of the specified type and count in the specified range. <br><br> ";
+        return "Use /api/flowerstore/search?flowerType=ROSE to search for flower buckets with "
+                + "flower packs of the specified type. <br><br> Use /api/flowerstore/search?flowerType=ROSE&"
+                + "minCount=2&maxCount=5 "
+                + "to search for flower buckets with flower packs of the specified type and count in "
+                + "the specified range. <br><br> ";
     }
 
     @GetMapping(path = "/search")
