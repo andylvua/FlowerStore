@@ -1,0 +1,37 @@
+###
+GET http://localhost:8080/api/flowerstore/database/view
+Accept: application/json
+
+###
+POST http://localhost:8080/api/flowerstore/database/add
+Content-Type: application/json
+
+{
+    "id": 4,
+    "color": "GREEN",
+    "price": 10.3,
+    "sepal_length": 5.3,
+    "type": "ROSE"
+}
+###
+POST http://localhost:8080/api/flowerstore/database/add
+Content-Type: application/json
+
+{
+    "id": 5,
+    "color": "RED",
+    "price": 70.0,
+    "sepal_length": 7.3,
+    "type": "TULIP"
+}
+###
+POST http://localhost:8080/api/flowerstore/database/add
+Content-Type: application/json
+
+{
+    "id": 6,
+    "color": "YELLOW",
+    "price": 20.0,
+    "sepal_length": 6.3,
+    "type": "ROSE"
+}
