@@ -1,11 +1,14 @@
-package ua.edu.ucu.apps.manager;
+package ua.edu.ucu.apps.flowerstoreweb.manager;
 
-import ua.edu.ucu.apps.models.FlowerBucket;
-import ua.edu.ucu.apps.models.FlowerPack;
-import ua.edu.ucu.apps.models.FlowerType;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import ua.edu.ucu.apps.flowerstoreweb.models.FlowerBucket;
+import ua.edu.ucu.apps.flowerstoreweb.models.FlowerPack;
+import ua.edu.ucu.apps.flowerstoreweb.models.FlowerType;
 
 import java.util.ArrayList;
 
+@SpringBootApplication
 public class FlowerStore {
     private final ArrayList<FlowerBucket> flowerBuckets = new ArrayList<>();
 
@@ -45,5 +48,10 @@ public class FlowerStore {
 
     public final void sell(final FlowerBucket flowerBucket) {
         flowerBuckets.remove(flowerBucket);
+    }
+
+    @GetMapping("/all")
+    public final ArrayList<FlowerBucket> getFlowerBuckets() {
+        return flowerBuckets;
     }
 }

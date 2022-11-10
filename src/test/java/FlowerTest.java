@@ -1,8 +1,6 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import ua.edu.ucu.apps.models.Flower;
-import ua.edu.ucu.apps.models.FlowerColor;
-import ua.edu.ucu.apps.models.FlowerType;
+import ua.edu.ucu.apps.flowerstoreweb.models.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

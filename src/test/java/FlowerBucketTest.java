@@ -1,9 +1,6 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import ua.edu.ucu.apps.models.Flower;
-import ua.edu.ucu.apps.models.FlowerBucket;
-import ua.edu.ucu.apps.models.FlowerPack;
-import ua.edu.ucu.apps.models.Rose;
+import ua.edu.ucu.apps.flowerstoreweb.models.*;
 
 import java.util.ArrayList;
 

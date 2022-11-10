@@ -1,4 +1,4 @@
-package ua.edu.ucu.apps.models;
+package ua.edu.ucu.apps.flowerstoreweb.models;
 
 public class Rose extends Flower {
     public Rose() {
