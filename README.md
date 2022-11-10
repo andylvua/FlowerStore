@@ -34,7 +34,7 @@ Simple flower store application for Labs 5-8 assignment of OOP course.
 - [x] Set up GitHub Actions for this project that would run your tests.
 - [x] Send a link to your GitHub here.
 
-### Results
+### Results of Lab 7
 
 #### api/flowerstore
 
@@ -71,7 +71,7 @@ We can go to the endpoint `api/flowerstore/all` to see all flowers in the store.
 - [x] Set up GitHub Actions for this project that would run your tests.
 - [x] Send a link to your GitHub here.
 
-### Results
+### Results of Lab 8
 
 #### GET request
 We can add a several flower instances to the database using IntelliJ IDEA Database Viewer.
