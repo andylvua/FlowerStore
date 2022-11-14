@@ -1,6 +1,7 @@
 # Flower Store
 
 [![Java CI](https://github.com/andylvua/FlowerStore/actions/workflows/ci.yaml/badge.svg)](https://github.com/andylvua/FlowerStore/actions/workflows/ci.yaml)
+![Heroku](https://img.shields.io/static/v1?message=deployed&logo=Heroku&color=32CD32&label=Heroku)
 
 ## Description
 
