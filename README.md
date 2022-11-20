@@ -113,13 +113,13 @@ Now, sending a GET request to the endpoint `api/flowerstore/database/view` yield
 - [x] Implement `@Transient` to replace dob getter. Use Period.between local date to implement getter.
 - [x] Implement `Optional<AppUser>findUserByEmail(String email);` to guarantee that we don't have two users with the same email.
 - [x] Check `@Column` anotation and `unique=true`.
-- [x] Implement `Observer` pattern to notify Customer when Order is processed diagram (diagram.png).
+- [x] Implement `Observer` pattern to notify Customer when Order is processed diagram.
 - [x] Send a link to GitHub and to your application here.
 
 
 ### Results of Lab 9
 
-Now Flower Store is available on Heroku: https://flower-store-lab.herokuapp.com/api/flowerstore
+#### Now Flower Store is available on [Heroku](https://flower-store-lab.herokuapp.com/api/flowerstore)
 
 Also, it's now supporting user endpoints:
 `/api/flowerstore/user/all` - returns all users
