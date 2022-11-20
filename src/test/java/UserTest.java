@@ -10,6 +10,6 @@ public class UserTest {
     public void testDateOfBirth() {
         User user = new User();
         user.setDob(LocalDate.of(1999, 1, 1));
-        assertEquals("1999-12-31", user.getDob().toString());
+        assertEquals("1999-01-01", user.getDob().toString());
     }
 }
