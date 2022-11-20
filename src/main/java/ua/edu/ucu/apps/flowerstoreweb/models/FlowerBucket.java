@@ -2,13 +2,15 @@ package ua.edu.ucu.apps.flowerstoreweb.models;
 
 import java.util.ArrayList;
 
-public class FlowerBucket {
+public class FlowerBucket extends Item {
     private ArrayList<FlowerPack> flowerPacks = new ArrayList<>();
 
     public FlowerBucket() {
+        super("FlowerBucket", 1, 0);
     }
 
-    public FlowerBucket(final ArrayList<FlowerPack> newFlowerPacks) {
+    public FlowerBucket(ArrayList<FlowerPack> newFlowerPacks) {
+        super("FlowerBucket", 1, 0);
         this.flowerPacks = newFlowerPacks;
     }
 

@@ -3,8 +3,12 @@ package ua.edu.ucu.apps.flowerstoreweb.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import ua.edu.ucu.apps.flowerstoreweb.client.Order;
+import ua.edu.ucu.apps.flowerstoreweb.delivery.Delivery;
 import ua.edu.ucu.apps.flowerstoreweb.manager.FlowerStore;
 import ua.edu.ucu.apps.flowerstoreweb.models.*;
+import ua.edu.ucu.apps.flowerstoreweb.payment.Payment;
+import ua.edu.ucu.apps.flowerstoreweb.user.User;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,7 +56,8 @@ public class FlowerController {
     public String index() {
         return "Welcome to the Flower Store! Use /api/flowerstore/all to get all flower buckets. "
                 + "<br><br> Use /api/flowerstore/help to get list of available commands."
-                + "<br><br> Use /api/flowerstore/initialize to initialize flower store with random data.";
+                + "<br><br> Use /api/flowerstore/initialize to initialize flower store with random data.<br><br> "
+                + "Use /api/flowerstore/users/all to get all users.";
     }
 
     @GetMapping("/all")
@@ -98,5 +103,12 @@ public class FlowerController {
     @PostMapping("/database/add")
     public void addFlower(@RequestBody Flower flower) {
         flowerStore.addFlowerToDatabase(flower);
+    }
+
+    @PostMapping("/order")
+    public void order(@RequestBody User user, @RequestBody List<Item> items, @RequestBody int quantity,
+                      @RequestBody Payment payment, @RequestBody Delivery delivery) {
+        Order order = new Order(user, items, quantity, payment, delivery, flowerStore);
+        order.processOrder();
     }
 }

@@ -4,6 +4,7 @@ import ua.edu.ucu.apps.flowerstoreweb.manager.FlowerStore;
 import ua.edu.ucu.apps.flowerstoreweb.models.*;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -41,7 +42,10 @@ public class FlowerStoreTest {
 
     @Test
     void testSell() {
-        FlowerBucket toSell = flowerStore.search(FlowerType.ROSE).get(0);
+        List<Item> toSell = new ArrayList<>();
+
+        FlowerBucket flowerBucket = flowerStore.getFlowerBuckets().get(0);
+        toSell.add(flowerBucket);
 
         flowerStore.sell(toSell);
 

@@ -5,10 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 import ua.edu.ucu.apps.flowerstoreweb.database.FlowerRepository;
-import ua.edu.ucu.apps.flowerstoreweb.models.Flower;
-import ua.edu.ucu.apps.flowerstoreweb.models.FlowerBucket;
-import ua.edu.ucu.apps.flowerstoreweb.models.FlowerPack;
-import ua.edu.ucu.apps.flowerstoreweb.models.FlowerType;
+import ua.edu.ucu.apps.flowerstoreweb.models.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -67,8 +64,12 @@ public class FlowerStore {
         return result;
     }
 
-    public final void sell(final FlowerBucket flowerBucket) {
-        flowerBuckets.remove(flowerBucket);
+    public final void sell(final List<Item> items) {
+        for (Item item : items) {
+            if (item instanceof FlowerBucket) {
+                flowerBuckets.remove(item);
+            }
+        }
     }
 
     @GetMapping("/all")
