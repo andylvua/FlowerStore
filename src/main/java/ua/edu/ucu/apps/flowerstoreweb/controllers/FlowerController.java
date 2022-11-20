@@ -1,18 +1,21 @@
 package ua.edu.ucu.apps.flowerstoreweb.controllers;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
 import ua.edu.ucu.apps.flowerstoreweb.manager.FlowerStore;
 import ua.edu.ucu.apps.flowerstoreweb.models.*;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @RestController
+@Controller
 @RequestMapping("/api/flowerstore")
 public class FlowerController {
     private final FlowerStore flowerStore;
 
+    @Autowired
     public FlowerController(FlowerStore flowerStore) {
         this.flowerStore = flowerStore;
     }
@@ -85,5 +88,15 @@ public class FlowerController {
     @GetMapping("/**")
     public String badRoute() {
         return "Whoops! Looks like you've entered a bad route. Try /api/flowerstore/all";
+    }
+
+    @GetMapping("/database/view")
+    public List<Flower> getFlowers() {
+        return flowerStore.getFlowersFromDatabase();
+    }
+
+    @PostMapping("/database/add")
+    public void addFlower(@RequestBody Flower flower) {
+        flowerStore.addFlowerToDatabase(flower);
     }
 }

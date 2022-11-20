@@ -3,13 +3,31 @@ package ua.edu.ucu.apps.flowerstoreweb.models;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Table;
+import javax.persistence.Id;
+import javax.persistence.Enumerated;
+import javax.persistence.EnumType;
+
 @Getter
 @Setter
+@Entity
+@Table(name = "flowers")
 public class Flower {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     private double price;
+
     private double sepalLength;
+
+    @Enumerated(EnumType.STRING)
     private FlowerColor color;
 
+    @Enumerated(EnumType.STRING)
     private FlowerType type;
 
     public Flower() {
