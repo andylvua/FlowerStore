@@ -5,7 +5,7 @@
 
 ## Description
 
-Simple flower store application for Labs 5-8 assignment of OOP course.
+Simple flower store application for Labs 5-9 assignment of OOP course.
 
 ## Lab 5 Task
 
@@ -74,7 +74,7 @@ We can go to the endpoint `api/flowerstore/all` to see all flowers in the store.
 
 ### Results of Lab 8
 
-#### GET request
+#### Database GET request
 We can add a several flower instances to the database using IntelliJ IDEA Database Viewer.
 
 <img width="826" alt="image" src="https://user-images.githubusercontent.com/93153950/201207104-d1047913-0576-45c2-a36c-29d97b44099d.png">
@@ -87,7 +87,7 @@ We can see that all flower instances were successfully added to the database and
 
 <img width="1396" alt="image" src="https://user-images.githubusercontent.com/93153950/201207129-dd322a40-daa0-4503-9eed-15d426dc991e.png">
 
-#### POST request
+#### Database POST request
 Now, let's send a several POST requests to the endpoint `api/flowerstore/database/add` to add a new flower instance to the store's database.
 
 <img width="826" alt="image" src="https://user-images.githubusercontent.com/93153950/201209162-8eeb038f-aa49-4867-a0c0-1e9b15792844.png">
@@ -101,6 +101,69 @@ As we can see, the server responded with a status code 200 and the flower instan
 Now, sending a GET request to the endpoint `api/flowerstore/database/view` yields the following result:
 
 <img width="1397" alt="image" src="https://user-images.githubusercontent.com/93153950/201209272-dd62795f-9136-48f6-a02c-660dc7935f0e.png">
+
+
+### Lab 9 Task
+
+- [x] Create account on Heroku and apply for student discount. Login into Heroku.
+- [x] Create GIT inside your project. Initialize heroku app heroku create. Push into Heroku git push heroku main
+- [x] Change version of Java if needed. Check system.properties.
+- [x] Test your app with test.http from previous lab.
+- [x] Implement class `AppUsser` with attributes: `id`, `email`, `dob`, `age`. Connect it to DB, implement GET and POST methods for it to list all users and add user to DB.
+- [x] Implement `@Transient` to replace dob getter. Use Period.between local date to implement getter.
+- [x] Implement `Optional<AppUser>findUserByEmail(String email);` to guarantee that we don't have two users with the same email.
+- [x] Check `@Column` anotation and `unique=true`.
+- [x] Implement `Observer` pattern to notify Customer when Order is processed diagram.
+- [x] Send a link to GitHub and to your application here.
+
+
+### Results of Lab 9
+
+#### Now Flower Store is available on [Heroku](https://flower-store-lab.herokuapp.com/api/flowerstore)
+
+Also, it's now supporting user endpoints:
+`/api/flowerstore/user/all` - returns all users
+`/api/flowerstore/user/add` - adds a new user
+
+#### Users GET request
+
+Sending a GET request to the endpoint `api/flowerstore/user/all` returns all users in the database.
+
+Let's try to send the following request:
+
+<img width="743" alt="image" src="https://user-images.githubusercontent.com/93153950/202903623-89dff5de-f728-4c29-8b1a-bc200d861874.png">
+
+As we can see, the server responded with a status code 200 and returned all users in the database:
+
+<img width="1395" alt="image" src="https://user-images.githubusercontent.com/93153950/202903473-e6c831d7-aa93-4688-b44f-94a0c71cec2c.png">
+
+Obviously, there are no users in the database yet.
+
+#### Users POST request
+
+Sending a POST request to the endpoint `api/flowerstore/user/add` adds a new user to the database:
+
+For example, let's add a new user with the following parameters:
+
+<img width="775" alt="image" src="https://user-images.githubusercontent.com/93153950/202903541-9e7ba063-fcfc-4282-bad9-c7af4c844306.png">
+
+The server responded with a status code 200 and the user was successfully added to the database:
+
+<img width="1394" alt="image" src="https://user-images.githubusercontent.com/93153950/202903586-c309c05e-7ebd-4cd5-a959-18179fffa351.png">
+
+Now, sending a GET request to the endpoint `api/flowerstore/user/all` yields the following result:
+
+<img width="1395" alt="image" src="https://user-images.githubusercontent.com/93153950/202903727-1a0ea716-f912-410a-ade8-25efb5e19ef2.png">
+
+#### User email uniqueness
+
+Let's try to add a new user with the same email as the one we've already added:
+
+<img width="773" alt="image" src="https://user-images.githubusercontent.com/93153950/202903812-571cbba5-e562-4461-b678-43bdf6226761.png">
+
+As we can see, the server responded with a status code 400 saying that the email is already taken:
+
+<img width="1393" alt="image" src="https://user-images.githubusercontent.com/93153950/202903843-eaebd034-8094-4bc1-81c1-43e1de682abd.png">
 
 ## License
 

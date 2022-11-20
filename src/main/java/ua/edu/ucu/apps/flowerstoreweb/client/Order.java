@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import ua.edu.ucu.apps.flowerstoreweb.delivery.Delivery;
+import ua.edu.ucu.apps.flowerstoreweb.manager.FlowerStore;
 import ua.edu.ucu.apps.flowerstoreweb.models.Item;
 import ua.edu.ucu.apps.flowerstoreweb.payment.Payment;
 import ua.edu.ucu.apps.flowerstoreweb.user.User;
@@ -19,6 +20,7 @@ public class Order {
     private int quantity;
     private Payment payment;
     private Delivery delivery;
+    private FlowerStore flowerStore;
 
     public void add(Item item) {
         items.add(item);
@@ -31,6 +33,8 @@ public class Order {
     public void processOrder() {
         payment.pay(items, user);
         delivery.deliver(items);
+        user.setBalance(user.getBalance() - getTotalPrice());
+        flowerStore.sell(items);
     }
 
     public double getTotalPrice() {
