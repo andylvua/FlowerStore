@@ -5,7 +5,7 @@
 
 ## Description
 
-Simple flower store application for Labs 5-8 assignment of OOP course.
+Simple flower store application for Labs 5-9 assignment of OOP course.
 
 ## Lab 5 Task
 
@@ -74,7 +74,7 @@ We can go to the endpoint `api/flowerstore/all` to see all flowers in the store.
 
 ### Results of Lab 8
 
-#### GET request
+#### Database GET request
 We can add a several flower instances to the database using IntelliJ IDEA Database Viewer.
 
 <img width="826" alt="image" src="https://user-images.githubusercontent.com/93153950/201207104-d1047913-0576-45c2-a36c-29d97b44099d.png">
@@ -87,7 +87,7 @@ We can see that all flower instances were successfully added to the database and
 
 <img width="1396" alt="image" src="https://user-images.githubusercontent.com/93153950/201207129-dd322a40-daa0-4503-9eed-15d426dc991e.png">
 
-#### POST request
+#### Database POST request
 Now, let's send a several POST requests to the endpoint `api/flowerstore/database/add` to add a new flower instance to the store's database.
 
 <img width="826" alt="image" src="https://user-images.githubusercontent.com/93153950/201209162-8eeb038f-aa49-4867-a0c0-1e9b15792844.png">
@@ -125,7 +125,7 @@ Also, it's now supporting user endpoints:
 `/api/flowerstore/user/all` - returns all users
 `/api/flowerstore/user/add` - adds a new user
 
-#### GET request
+#### Users GET request
 
 Sending a GET request to the endpoint `api/flowerstore/user/all` returns all users in the database.
 
@@ -139,7 +139,7 @@ As we can see, the server responded with a status code 200 and returned all user
 
 Obviously, there are no users in the database yet.
 
-#### POST request
+#### Users POST request
 
 Sending a POST request to the endpoint `api/flowerstore/user/add` adds a new user to the database:
 
